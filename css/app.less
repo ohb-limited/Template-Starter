@@ -1,5 +1,15 @@
 /*========================================
 
+	Potential Removal Required
+	
+	- search "potential removal required"
+	to highlight code that may not be 
+	needed in the final build.
+
+========================================*/
+
+/*========================================
+
 	Reset
 
 ========================================*/
@@ -28,14 +38,37 @@
 	position:fixed;
 }
 
+.row {
+	.relative;
+	display:block;
+	margin:0 auto;
+	& .row {
+		margin: 0 -15px;
+	}
+}
+
+.font {
+	
+}
+.fa {
+	font-family: "FontAwesome";
+}
+
 /*========================================
 
-	Variables
+	Variables & Mixins
 
 ========================================*/
 
 @white: #ffffff;
 @black: #000000;
+
+
+.transition(@time) {
+	transition: all @time ease-in-out;
+	-moz-transition: all @time ease-in-out;
+	-webkit-transition: all @time ease-in-out;
+}
 
 /*========================================
 
@@ -44,11 +77,24 @@
 ========================================*/
 
 body {
-
+	.relative;
+	.font;
 }
 
 .wrapper {
-	
+	.relative;
+
+	&.head {
+		padding:30px;
+		min-height:1px;
+		overflow:hidden;
+	}
+
+	&.foot {
+		padding:30px;
+		min-height:1px;
+		overflow:hidden;
+	}
 }
 
 /*========================================
@@ -58,13 +104,13 @@ body {
 ========================================*/
 
 h1 {
-	
+
 }
 h2 {
 	
 }
 h3 {
-	
+
 }
 
 p {
@@ -72,7 +118,51 @@ p {
 }
 
 a {
-	
+	text-decoration:none;
+	color:@black;
+	&.button {
+		display:inline-block;
+		padding:10px 20px;
+	}
+}
+
+span {
+	display:block;
+}
+
+/*========================================
+
+	Images
+
+========================================*/
+
+img {
+	display:block;
+	max-width:100%;
+	&.logo {
+		
+	}
+}
+
+
+
+/*========================================
+
+	Navigation
+
+========================================*/
+
+ul {
+	&.main {
+		list-style: none;
+		float:right;
+		& li {
+			display:inline-block;
+			float:left;
+			padding:10px 0 10px 20px;
+			font-weight:400;
+		}
+	}
 }
 
 
@@ -81,3 +171,4 @@ a {
 	UI
 
 ========================================*/
+
